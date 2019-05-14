@@ -1,53 +1,69 @@
 package com.frankie.computerscience.datastructures.singlylinkedlist;
 
-public class LinkedList {
+public class LinkedList <T> {
     private class Node {
-        Node nextNode; // points to next node
-        int data; // holding value
+        Node next; // points to next node
+        T data; // holding value
 
-        private Node (int data) {
+        private Node (T data) {
             this.data = data;
         }
     }
 
     private Node head; // first node in the linkedlist
 
-    public void append (int data){
+    public void append (T data){
         if (head == null) { // check if empty linkedlist
             head = new Node(data);
-        } else if (head.nextNode == null) { // check if there is more than one node in the linkedlist
-            head.nextNode = new Node(data);
+        } else if (head.next == null) { // check if there is more than one node in the linkedlist
+            head.next = new Node(data);
         } else {
             Node currentNode = head;// the node of the linkedlist we are on
-            while (currentNode.nextNode != null){// as long as current node is not the last node, aka has nextNode node, we update current node to be nextNode node
-                currentNode = currentNode.nextNode;
+            while (currentNode.next != null){// as long as current node is not the last node, aka has next node, we update current node to be next node
+                currentNode = currentNode.next;
             }
-            currentNode.nextNode = new Node(data); // add the node to end of linkedlist
+            currentNode.next = new Node(data); // add the node to end of linkedlist
         }
     }
 
-    public void prepend (int data){
+    public void prepend (T data){
         if (head == null) {
             head = new Node(data);
         } else {
             Node newHead = new Node(data); // create a new head
-            newHead.nextNode = head; // make current head the nextNode of newHead
+            newHead.next = head; // make current head the next of newHead
             head = newHead; // update head to be newHead
         }
     }
 
-    public void deleteValue (int data){
+    public void deleteValue (T data){
         if (head.data == data){
-            head = head.nextNode;
+            head = head.next;
             return;
         }
         Node currentNode = head;
-        while (currentNode.nextNode != null){
-            if (currentNode.nextNode.data == data){
-                currentNode.nextNode = currentNode.nextNode.nextNode; // skip current nextNode to the next nextNode
+        while (currentNode.next != null){
+            if (currentNode.next.data == data){
+                currentNode.next = currentNode.next.next; // skip current next to the next next
                 return;  // break out of loop
             }
-            currentNode = currentNode.nextNode;
+            currentNode = currentNode.next;
+        }
+    }
+
+    public void reverse () {
+        if (head != null){ // non-empty linkedlist
+            Node previousNode = null;
+            Node currentNode = head;
+            Node nextNode = null;
+            while (currentNode.next != null){
+                nextNode = currentNode.next; //  pointer to next node
+                currentNode.next = previousNode; // reverse pointer of current node to previous node
+                previousNode = currentNode; // make current node the previous node
+                currentNode = nextNode; // make next node the current node and repeat this process
+            }
+            head = currentNode; // since currentNode.next points to null, we have reach the end of linkedlist. Make currentNode the new head
+            head.next = previousNode; // make new head.next point to previous node
         }
     }
 
@@ -57,8 +73,8 @@ public class LinkedList {
             System.out.println("Empty LinkedList!");
         } else {
             System.out.println(String.format("%s : %s", printNode, printNode.data));
-            while (printNode.nextNode != null){
-                printNode = printNode.nextNode;
+            while (printNode.next != null){
+                printNode = printNode.next;
                 System.out.println(String.format("%s : %s", printNode, printNode.data));
             }
         }
