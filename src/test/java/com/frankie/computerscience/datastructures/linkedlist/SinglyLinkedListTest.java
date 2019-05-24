@@ -8,9 +8,9 @@ public class SinglyLinkedListTest {
     private SinglyLinkedList<Integer> myLinkedList;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         myLinkedList = new SinglyLinkedList();
-        for (int x = 1; x <= 5; x++){
+        for (int x = 1; x <= 5; x++) {
             myLinkedList.append(x);
         }
     }

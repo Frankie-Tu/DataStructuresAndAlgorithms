@@ -1,4 +1,4 @@
-# DataStructureAndAlogorithms
+# DataStructureAndAlgorithms
 
 Exploring computer science concepts in data structures and algorithms.
 
