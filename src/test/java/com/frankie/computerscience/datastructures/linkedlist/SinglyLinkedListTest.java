@@ -16,6 +16,12 @@ public class SinglyLinkedListTest {
     }
 
     @Test
+    public void testPrint() {
+        System.out.println("Should print 1 to 5");
+        myLinkedList.printList();
+    }
+
+    @Test
     public void testAppend() {
         System.out.println("Should print 1 to 6");
         myLinkedList.append(6);
