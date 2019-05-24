@@ -72,10 +72,9 @@ public class SinglyLinkedList<T> {
         if (printNode == null) {
             System.out.println("Empty SinglyLinkedList!");
         } else {
-            System.out.println(String.format("%s : %s", printNode, printNode.data));
-            while (printNode.next != null) {
-                printNode = printNode.next;
+            while (printNode != null) {
                 System.out.println(String.format("%s : %s", printNode, printNode.data));
+                printNode = printNode.next;
             }
         }
     }
