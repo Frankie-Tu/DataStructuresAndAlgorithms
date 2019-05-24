@@ -1,19 +1,15 @@
-package com.frankie.computerscience.datastructures.singlylinkedlist;
+package com.frankie.computerscience.datastructures.linkedlist;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import sun.awt.image.ImageWatched;
-
-import static org.junit.Assert.*;
 
 // semi manual testing
-public class LinkedListTest {
-    private LinkedList<Integer> myLinkedList;
+public class SinglyLinkedListTest {
+    private SinglyLinkedList<Integer> myLinkedList;
 
     @Before
     public void setUp(){
-        myLinkedList = new LinkedList();
+        myLinkedList = new SinglyLinkedList();
         for (int x = 1; x <= 5; x++){
             myLinkedList.append(x);
         }

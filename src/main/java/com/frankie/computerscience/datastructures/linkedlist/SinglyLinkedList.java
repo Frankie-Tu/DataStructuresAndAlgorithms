@@ -1,6 +1,6 @@
-package com.frankie.computerscience.datastructures.singlylinkedlist;
+package com.frankie.computerscience.datastructures.linkedlist;
 
-public class LinkedList <T> {
+public class SinglyLinkedList<T> {
     private class Node {
         Node next; // points to next node
         T data; // holding value
@@ -70,7 +70,7 @@ public class LinkedList <T> {
     public void printList () {
         Node printNode = head; // starting from the first node
         if (printNode == null) {
-            System.out.println("Empty LinkedList!");
+            System.out.println("Empty SinglyLinkedList!");
         } else {
             System.out.println(String.format("%s : %s", printNode, printNode.data));
             while (printNode.next != null){
