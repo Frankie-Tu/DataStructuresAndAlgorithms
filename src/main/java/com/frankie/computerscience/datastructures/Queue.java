@@ -28,6 +28,7 @@ public class Queue {
             tail = head.next;
         } else {                      // has 2 or more nodes
             tail.next = new Node(data);
+            tail = tail.next;
         }
     }
 
