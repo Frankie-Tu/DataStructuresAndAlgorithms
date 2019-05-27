@@ -10,7 +10,7 @@ public class QueueTest {
 
     @Before
     public void setUp() {
-        for (int x = 0; x < 5; x++){
+        for (int x = 0; x < 5; x++) {
             myQueue.add(x);
         }
     }
@@ -36,7 +36,7 @@ public class QueueTest {
 
     @Test
     public void peek() {
-        assertEquals(myQueue.peek(),0);
+        assertEquals(myQueue.peek(), 0);
         System.out.println("peek test: should print 0,1,2,3,4");
         myQueue.printQueue();
     }
