@@ -16,7 +16,7 @@ Exploring computer science concepts in data structures and algorithms.
 
 ## Algorithms
 ### Sorting
-- [ ] Selection Sort
+- [x] Selection Sort
 - [ ] Bubble Sort
 - [ ] Merge Sort
 - [ ] Insertion Sort
