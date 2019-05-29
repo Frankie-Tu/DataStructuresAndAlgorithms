@@ -21,6 +21,6 @@ Exploring computer science concepts in data structures and algorithms.
 - [ ] Merge Sort
 - [ ] Insertion Sort
 ### Searching
-- [ ] Linear Search
+- [x] Linear Search
 - [x] Binary Search
 - [ ] TBD
