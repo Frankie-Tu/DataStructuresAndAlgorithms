@@ -1,7 +1,9 @@
 package com.frankie.computerscience.algorithms.sort;
 
-import java.util.Arrays;
-
+// Worst case: O(n^2), descending array to ascending array,
+//                     "bubbling" bottom values across array to top, top values to bottom which is
+//                     approximately n elements moving n times when n is approaching infinity.
+// Best case: O(n), one iteration, no swaps, all elements in place
 public class BubbleSort {
     public static int[] returnSorted(int[] arr) {
         while (true) {
