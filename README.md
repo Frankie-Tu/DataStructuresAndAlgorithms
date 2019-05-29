@@ -17,10 +17,10 @@ Exploring computer science concepts in data structures and algorithms.
 ## Algorithms
 ### Sorting
 - [x] Selection Sort
-- [ ] Bubble Sort
+- [x] Bubble Sort
 - [ ] Merge Sort
 - [ ] Insertion Sort
 ### Searching
 - [ ] Linear Search
-- [ ] Binary Search
+- [x] Binary Search
 - [ ] TBD
