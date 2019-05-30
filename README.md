@@ -19,7 +19,7 @@ Exploring computer science concepts in data structures and algorithms.
 - [x] Selection Sort
 - [x] Bubble Sort
 - [ ] Merge Sort
-- [ ] Insertion Sort
+- [x] Insertion Sort
 ### Searching
 - [x] Linear Search
 - [x] Binary Search
