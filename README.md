@@ -5,7 +5,7 @@ Exploring computer science concepts in data structures and algorithms.
 ## Data Structures
 - [x] Implementing SinglyLinkedList
 - [ ] Implementing CircularLinkedList
-- [ ] Implementing DoublyLinkedList
+- [x] Implementing DoublyLinkedList
 - [x] Implementing Stack
 - [x] Implementing Queue
 - [ ] Implementing BinaryTree
