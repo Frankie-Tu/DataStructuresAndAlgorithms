@@ -8,7 +8,7 @@ Exploring computer science concepts in data structures and algorithms.
 - [x] Implementing DoublyLinkedList
 - [x] Implementing Stack
 - [x] Implementing Queue
-- [ ] Implementing BinaryTree
+- [x] Implementing BinaryTree
 - [ ] Implementing BinarySearchTree
 - [ ] Implementing Heap
 - [ ] Implementing Graph
