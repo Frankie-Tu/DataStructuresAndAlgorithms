@@ -27,5 +27,19 @@ public class BinarySearchTree extends BinaryTree {
         }
     }
 
+    public Node search(int val) {
+        Node currentNode = root;
 
+        // when currentNode is null, either root is null or val is not found from traversal
+        while (currentNode != null) {
+            if (currentNode.getData() > val) {
+                currentNode = currentNode.getLeft();
+            } else if (currentNode.getData() < val) {
+                currentNode = currentNode.getRight();
+            } else {
+                return currentNode;
+            }
+        }
+        return null;
+    }
 }
