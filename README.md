@@ -9,7 +9,7 @@ Exploring computer science concepts in data structures and algorithms.
 - [x] Implementing Stack
 - [x] Implementing Queue
 - [x] Implementing BinaryTree
-- [ ] Implementing BinarySearchTree
+- [x] Implementing BinarySearchTree
 - [ ] Implementing Heap
 - [ ] Implementing Graph
 - [ ] TBD
