@@ -3,13 +3,16 @@ package com.frankie.computerscience.datastructures;
 // FIFO
 // remove, peak head
 // add tail;
-public class Queue {
-    private class Node {
-        private int data;
+public class Queue <T> {
+    public class Node {
+        private T data;
         private Node next;
 
-        private Node(int data) {
+        private Node(T data) {
             this.data = data;
+        }
+        public T getData() {
+            return data;
         }
     }
 
@@ -20,7 +23,7 @@ public class Queue {
         return head == null;
     }
 
-    public void add(int data) {
+    public void add(T data) {
         if (head == null) {            // empty
             head = new Node(data);
         } else if (tail == null) {     // has one Node
@@ -42,7 +45,7 @@ public class Queue {
         }
     }
 
-    public int peek() {
+    public T peek() {
         return head.data;
     }
 

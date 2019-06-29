@@ -29,7 +29,7 @@ public class QueueTest {
 
     @Test
     public void remove() {
-        myQueue.remove();
+        assertEquals(myQueue.remove().getData(), 0);
         System.out.println("remove test: should print 1,2,3,4");
         myQueue.printQueue();
     }
