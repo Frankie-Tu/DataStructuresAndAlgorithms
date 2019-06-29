@@ -49,4 +49,10 @@ public class BinaryTreeTest {
         System.out.println("postorderTraversal, should print: 4 7 8 5 2 6 3 1");
         myTree.postorderTraversal();
     }
+
+    @Test
+    public void breadthFirstTraversal() {
+        System.out.println("breadthFirstTraversal, should print: 1 2 3 4 5 6 7 8");
+        myTree.breadthFirstTraversal();
+    }
 }

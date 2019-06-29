@@ -1,5 +1,7 @@
 package com.frankie.computerscience.datastructures.tree;
 
+import com.frankie.computerscience.datastructures.Queue;
+
 public class BinaryTree {
 
     protected Node root;
@@ -62,6 +64,31 @@ public class BinaryTree {
             postorderTraversal(node.getLeft());
             postorderTraversal(node.getRight());
             System.out.println(node.getData());
+        }
+    }
+
+    public void breadthFirstTraversal() {
+        Queue<Node> nodeQueue = new Queue<Node>();
+
+        if (root != null) {
+            nodeQueue.add(root);
+        }
+
+        while (!nodeQueue.isEmpty()) {
+            /*
+            Note: queue returns Queue Node object which contains Tree Node object, thus getter was called twice.
+            First getter to get Tree Node, second getter to get data from Tree Node
+             */
+            Node currentNode = nodeQueue.remove().getData();
+            // add left node to queue if not null
+            if (currentNode.getLeft() != null) {
+                nodeQueue.add(currentNode.getLeft());
+            }
+            // add right node to queue if not null
+            if (currentNode.getRight() != null) {
+                nodeQueue.add(currentNode.getRight());
+            }
+            System.out.println(currentNode.getData());
         }
     }
 
