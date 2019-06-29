@@ -34,11 +34,6 @@ public class BinaryTree {
         }
     }
 
-    // overloaded public traversal method calling private traversal method with the actual logic
-    public void inorderTraversal() {
-        inorderTraversal(root);
-    }
-
     private void preorderTraversal(Node node) {
         /*
         depth first:
@@ -49,10 +44,6 @@ public class BinaryTree {
             preorderTraversal(node.getLeft());
             preorderTraversal(node.getRight());
         }
-    }
-
-    public void preorderTraversal() {
-        preorderTraversal(root);
     }
 
     private void postorderTraversal(Node node) {
@@ -90,6 +81,15 @@ public class BinaryTree {
             }
             System.out.println(currentNode.getData());
         }
+    }
+
+    // overloaded public traversal method calling private traversal method with the actual logic
+    public void inorderTraversal() {
+        inorderTraversal(root);
+    }
+
+    public void preorderTraversal() {
+        preorderTraversal(root);
     }
 
     public void postorderTraversal() {
